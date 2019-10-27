@@ -21,3 +21,4 @@ $\Delta = \frac{C^{up}-C^{down}}  {S^{up}-S^{down}}$
 
 ## BackDating
 to make the option in the money, stock holders (board) will decide to "backdate" their meeting, to trace back the strike price at a low level;
+```git 2nd res commit```
