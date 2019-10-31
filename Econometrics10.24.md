@@ -50,3 +50,20 @@ so the dividend follows the F-distribution.
 - Example1 : Heteroskedasticity
 - Example2 : Serial Correlation
 - Example3 : Panel Data with Random Effect
+   $P(X)=X^\intercal(X^\intercal X)^{-1}X$
+   $P(I_n \bigotimes l_Tl_T)$
+   $M(I_n \bigotimes l_Tl_T)=I_{nT}- P(I_n \bigotimes l_Tl_T)$
+## GLS
+$\Omega^{-1}=C\Lambda^{-1}C^\intercal$
+$=C\Lambda^{-0.5}\Lambda^{-0.5}C^\intercal$=
+$P^\intercal P, and\   \Omega =(P^\intercal P)^{-1}$
+$Py=P\beta X+P\epsilon$
+$E(\epsilon^*)=E(P\epsilon)=PE(\epsilon)$
+$y^*=X^*\beta+\epsilon^*$
+so $\hat{\beta}_{GLS}=({X^*}^\intercal X^*)^{-1}{X^*}^{\intercal}y^*,var(\hat{\beta}_{GLS})=\sigma^2(X^\intercal\Omega^{-1}X)^{-1}$
+### Feasible GLS 
+unknown $\Omega$, usually use $\hat{\Omega}  instead.$
+
+## MLE
+Maximum Likelihood Estimation
+Should assumpt the distribution first.
