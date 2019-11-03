@@ -54,3 +54,14 @@ $\left[\begin{matrix}{X_1(X_1^\intercal X_1)^{-1}X_1^\intercal}_{n\times n}+{X_2
 $F=\frac{\hat{\epsilon^*}^\intercal\hat{\epsilon^*}-\hat{\epsilon}^\intercal\hat{\epsilon}}{\hat{\epsilon}^\intercal\hat{\epsilon}}\times \frac{n-K}{J}$
 
 $\frac{\hat{\epsilon^*}^\intercal\hat{\epsilon^*}-\hat{\epsilon}^\intercal\hat{\epsilon}}{\hat{\epsilon}^\intercal\hat{\epsilon}}=\frac{(y-\beta^*X)(y-\beta^*X)^\intercal-(y-\hat{\beta}X)(y-\hat{\beta}X)^\intercal}{(y-\hat{\beta}X)(y-\hat{\beta}X)^\intercal}=s^{-2}(R\hat{\beta}-c)(R^\intercal(X^\intercal X)^{-1}R)^{-1}(R\hat{\beta}-c)/(n-K)$ so F-test equals to W-test statistic.
+<hr/>
+<div style="width:600px;height:120px; margin:auto;border:0px solid black">
+            <div style="float: left;border:0px  paleturquoise">
+                <img src="Hanqing.jpeg"style="width:400px">
+            </div>
+            <div style="font-size:24px;text-align: center;margin-top: 15px; float:left;">
+                杜瑞琛 <br/>
+                2019100505<br/>
+                drcuibe@163.com
+            </div>
+        </div>
