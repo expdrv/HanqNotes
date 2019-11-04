@@ -4,7 +4,6 @@
 <style>
 *{
     font-family:'Segoe UI';
-    font-size:25px
 }
 </style>
 # Macro Economics Ch1
@@ -145,7 +144,7 @@ $\rho$ subjective utility discount rate.
 $u(c(t))=\frac{C(t)^{1-\theta}}{1-\theta},\rho>0,\rho-n-(1-\theta)g>0$
 Constant relative risk aversion utility.
 relative risk aversion:$-\frac{c(u\prime\prime(c))}{u\prime(c)}$
- 1. $lim u^*(c_t)=ln(c(t+1))$ 
+ 1. $lim u^*(c_t)$ redifine $u^*(c_t)=\frac{c_t^{1-\theta}}{1-\theta}=ln(c(t+1))$ 
  2. $\rho-n-(1-\theta)g=>utility\; does\; not \; diverse$
 
 Firms : how much capital und labor to employ 
@@ -171,10 +170,19 @@ Competitive factor market
 
 - Households' capital holding at time S
   $\frac{K(S)}{H}=e^{R(s)}\frac{K(0)}{H}+\int_0^\infin e^{-R(t)}(W(t)-C(t))\frac{L(t)}{H}dt$
-  $\lim_{t \to \infin e^{R(s)}\frac{K(S)}{H}}\geq 0$=>No Ponzi Condition.
+  $\lim_{t \to \infin} e^{R(s)}\frac{K(S)}{H}\geq 0$=>No Ponzi Condition.
 - Households' maximization Problem.
     Define $c(t)=\frac{C(t)}{A(t)},\;A(t)=A(0)\times e^{gt}$
     Rewrite $u(c_t)=\frac{C(t)^{1-\theta}}{1-\theta}=\frac{[A(t)c(t)]^{1-\theta}}{1-\theta}=\frac{[A(0)e^{gt}]^{1-\theta}}{1-\theta}c(t)^{1-\theta}$
     $U=B\int e^{\beta t }\frac{C(t)^{1-\theta}}{1-\theta}dt$
     $B\equiv A(0)^{1-\theta}\frac{L(0)}{H},\;\beta\equiv\rho-n-(1-\theta)g$
-    
+-  using the fact that
+    - $C(t)=A(t)c(t)$
+    - $K(0)=k(0)A(0)L(0)$
+    - $W(t)=A(t)w(t)$
+- to Rewrite BC:
+  $\int e^{-R(t)}c(t)e^{(n+g)t}dt\leq k(0)+\int e^{-k(t)}w(t)e^{(n+g)t}dt$
+  Max U subject to BC
+  - Lagrangian $L=B\int e^{-\beta t}\frac{c(t)^{1-\theta}}{1-\theta}dt+\lambda k(0)+\int e^{-R(t)+(n+g)t}(w(t)-c(t))dt$
+  - FOC with respect to $c_t$
+    $Be^{-\beta t}c(t)^{-\theta}=\lambda e^{-R(t)}e^{(n+g)t}$
