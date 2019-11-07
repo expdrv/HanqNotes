@@ -62,8 +62,30 @@ $E(\epsilon^*)=E(P\epsilon)=PE(\epsilon)$
 $y^*=X^*\beta+\epsilon^*$
 so $\hat{\beta}_{GLS}=({X^*}^\intercal X^*)^{-1}{X^*}^{\intercal}y^*,var(\hat{\beta}_{GLS})=\sigma^2(X^\intercal\Omega^{-1}X)^{-1}$
 ### Feasible GLS 
-unknown $\Omega$, usually use $\hat{\Omega}  instead.$
+unknown $\Omega$, usually use $\hat{\Omega}\;instead.$
 
 ## MLE
 Maximum Likelihood Estimation
 Should assumpt the distribution first.
+$L(\beta,\sigma^2)=-\frac{n}{2}\pi-\frac{n}{2}ln\sigma^2-\frac{1}{2}ln|\Omega|-\frac{1}{2}(y-{X\beta}_{MLE})^\intercal\Omega^{-1}(y-{X\beta}_{MLE})$
+$\hat{\beta}_{MLE}=(X^\intercal\Omega^{-1}X)X^\intercal y$
+$\hat{\sigma}^2_{MLE}=(y-X\hat{\beta}_{MLE})^\intercal\Omega^{-1}(y-X\hat{\beta}_{MLE})$
+assume $\Omega=I$
+$l(\beta,\sigma^2)=-\frac{n}{2}log(\frac{1}{n}\hat{\epsilon}^\intercal\hat{\epsilon})-\frac{n}{2}=-\frac{n}{2}log(\frac{1}{n}\hat{\epsilon}^\intercal\hat{\epsilon})+C$
+$L(\beta,\sigma^2)=(\hat{\epsilon}^\intercal\hat{\epsilon})^{-\frac{n}{2}}\times C$
+```with restrictions```
+$C(\theta)=R\beta-r=0$
+$L(\tilde{\beta},\tilde{\sigma}^2)=C\times (\tilde{\epsilon}^\intercal\tilde{\epsilon})^{-\frac{n}{2}}$
+### 2.2 wald test
+$\hat{C}_{MLE}(\theta)=R\hat{\beta}_{MLE}-r=0$
+### 2.3 Lagrangian Multiplier Test
+check the graph, the estimation points $C(\hat{\theta})$ should be close to the MLE point.
+<div align="center"><img src="MLEtest.png"></div>
+
+#### remark4
+$X\tilde{\beta}+\tilde{\epsilon}=y$
+$M\tilde{\epsilon}=My,\;for\; MX=0$
+$My=(I-P)(X\hat{\beta}+\hat{\epsilon})=\hat{\epsilon}=M\tilde{\epsilon}$
+$\hat{\epsilon}^\intercal M\tilde{\epsilon}=\hat{\epsilon}^\intercal (I-P)\tilde{\epsilon}=\hat{\epsilon}^\intercal\tilde{\epsilon}-\hat{\epsilon}^\intercal P\tilde{\epsilon}=\hat{\epsilon}^\intercal\hat{\epsilon}$
+so $\;\hat{\epsilon}^\intercal P\tilde{\epsilon}=\hat{\epsilon}^\intercal\tilde{\epsilon}-\hat{\epsilon}^\intercal\hat{\epsilon}$
+$LM=\frac{n\hat{\epsilon}^\intercal P\tilde{\epsilon}}{\tilde{\epsilon}^\intercal\tilde{\epsilon}}=\frac{n\hat{\epsilon}^\intercal\tilde{\epsilon}-\hat{\epsilon}^\intercal\hat{\epsilon}}{\tilde{\epsilon}^\intercal\tilde{\epsilon}}$
