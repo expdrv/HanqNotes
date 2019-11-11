@@ -183,6 +183,15 @@ Competitive factor market
 - to Rewrite BC:
   $\int e^{-R(t)}c(t)e^{(n+g)t}dt\leq k(0)+\int e^{-k(t)}w(t)e^{(n+g)t}dt$
   Max U subject to BC
-  - Lagrangian $L=B\int e^{-\beta t}\frac{c(t)^{1-\theta}}{1-\theta}dt+\lambda k(0)+\int e^{-R(t)+(n+g)t}(w(t)-c(t))dt$
+  - Lagrangian $L=B\int e^{-\beta t}\frac{c(t)^{1-\theta}}{1-\theta}dt+\lambda [{ k(0)+\int e^{-R(t)+(n+g)t}(w(t)-c(t))dt}]$
   - FOC with respect to $c_t$
     $Be^{-\beta t}c(t)^{-\theta}=\lambda e^{-R(t)}e^{(n+g)t}$
+   - $lnB-\beta t-\theta ln c(t) =ln\lambda -R(t)+(n+g)\times t,\;R(t)=\int r(t)dt$ 
+   - differentiating with with respect to
+    $-\beta -\theta\frac{\dot{c}(t)}{c(t)}=-r(t)+(n+g)$
+    - $\frac{\dot{c}(t)}{c(t)}=\frac{r(t)-n-g-\beta}{\theta}=\frac{r(t)-\rho-\theta g}{\theta}$ ```Euler Equation!```
+    - $t=0 -> c(0)$ can be solved,$c(t)=f(c(t))$
+    - $\frac{\dot{C}(t)}{C(t)}=\frac{\dot{c}(t)}{c(t)}+\frac{\dot{A}(t)}{A(t)}=\frac{r(t)-\rho-\theta g}{\theta}+g=\frac{r(t)-\rho}{\theta}$
+
+ -  Intuition behind Euler equation
+     If the household is optimizing it's consumption path, ```utility loss at t=utility gain at t+dt```. 
